@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Makes the application crawlable to web spiders (cached)",
-  version: "1.0.4",
+  version: "1.0.5",
   git: 'https://github.com/chfritz/meteor-spiderable-cached.git'
 });
 
