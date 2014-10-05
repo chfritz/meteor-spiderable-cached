@@ -95,7 +95,6 @@ WebApp.connectHandlers.use(function (req, res, next) {
     // processes.)
 
       var cache = SpiderCache.findOne({url: JSON.stringify(url)});
-      console.log("spiderable", new Date() - cache.date, Spiderable.CACHE_TIME);
       if (cache && (new Date() - cache.date < Spiderable.CACHE_TIME)) {
           res.writeHead(200, {'Content-Type': 'text/html; charset=UTF-8'});
           res.end(cache.html);
